@@ -9,11 +9,11 @@ Player name: Donnie
 	-Initial Critical Thinking______________:1
 
 *Final Self Assesment:
-	-Final Leadership_______________________:17
-	-Final Professionalism_______________________:17
-	-Final Technology_______________________:17
-	-Final Communication_______________________:17
-	-Final Critical Thinking_______________________:17
+	-Final Leadership_______________________:20
+	-Final Professionalism__________________:20
+	-Final Technology_______________________:20
+	-Final Communication____________________:20
+	-Final Critical Thinking________________:20
 
 *Chosen Career Field
 [No Career Fair Choice]

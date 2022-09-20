@@ -13,10 +13,9 @@ namespace leadership
         //      The players Technology skill increases -> UpdatePlayerResults ("Final Technology", playerFileName)
         //      or UpdatePlayerResults ("Final Technology", "mytext.txt")
         //NOTE: playerFileName should be used as the second parameter because that is the variable as the current session player
-        public void UpdatePlayerResults(string statName, string FileToUpdate )
+        public void UpdatePlayerResults(string statName, string FileToUpdate)
         {
             string playerFileName = FileToUpdate;
-            
 
             var lines = File.ReadAllLines(playerFileName); //read file into lines var
             int i = -1;
@@ -26,27 +25,36 @@ namespace leadership
                 i++;
                 string finalStatRegex = @"^\s+-" + statName + @"_*:\s*\d*\s?$"; //Match for Final Stats section
 
-                Match matchString = Regex.Match(s, finalStatRegex);
-                Match matchNum = Regex.Match(lines[i], @"\d+");
+                Match matchString = Regex.Match(s, finalStatRegex); //UPDATE for multiple matches
+                Match matchNum = Regex.Match(lines[i], @"\d+"); //Match num in string
 
                 if (matchString.Success) //string match from file
                 {
-                    Debug.Write("String match line: " + i +" | ");
-                    
+                    Debug.Write("String match line: " + i + " | ");
+
                     if (matchNum.Success)// number match from string
                     {
-                        Debug.Write("Found NUM "+ matchNum + " | ");
-                        if (Int32.TryParse(matchNum.Value, out int val)) //number can cast to int
+                        if (Int32.TryParse(matchNum.Value, out int val))
                         {
-                            val++; //increase leadership value by 1
-                            Debug.Write("Updated to NUM "+val+"\n");
-                            lines[i] = $"\t-{statName}_______________________:{val}";
-                            File.WriteAllLines(playerFileName, lines); //rewerite file with update
+                            Debug.Write("Found NUM " + matchNum + " | ");
 
+                            val++; //increase leadership value by 1
+
+                            lines[i] = Regex.Replace(matchString.ToString(), matchNum.ToString(), val.ToString()); //(input, pattern, replacement)  (original string, found num, updated num)
+
+                            Debug.Write("Updated to NUM " + val + "\n");
+
+                        }
+                        else
+                        {
+                            Debug.Write("ERROR:Line " + i + " unable to convert " + matchNum.Value + " to an INT for update");
                         }
                     }
                 }
+
             }
+            File.WriteAllLines(playerFileName, lines); //rewerite file with update
+
         }
 
         private static void Main(string[] args)
@@ -59,14 +67,13 @@ namespace leadership
             if (File.Exists("Donnie 9-19-2022 H16M11S32.txt"))
             {
                 Console.WriteLine("file found");
-               
             }
             string playerFileName = "Donnie 9-19-2022 H16M11S32.txt";
             a.UpdatePlayerResults("Final Leadership", playerFileName);
             a.UpdatePlayerResults("Final Professionalism", playerFileName);
             a.UpdatePlayerResults("Final Technology", playerFileName);
             a.UpdatePlayerResults("Final Communication", playerFileName);
-            a.UpdatePlayerResults("Final Critical Thinking",playerFileName);
+            a.UpdatePlayerResults("Final Critical Thinking", playerFileName);
         }
     }
 }
