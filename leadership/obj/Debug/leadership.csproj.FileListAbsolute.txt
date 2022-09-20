@@ -1,0 +1,8 @@
+C:\Users\Veteran\source\repos\leadership\leadership\bin\Debug\leadership.exe.config
+C:\Users\Veteran\source\repos\leadership\leadership\bin\Debug\leadership.exe
+C:\Users\Veteran\source\repos\leadership\leadership\bin\Debug\leadership.pdb
+C:\Users\Veteran\source\repos\leadership\leadership\obj\Debug\leadership.csproj.AssemblyReference.cache
+C:\Users\Veteran\source\repos\leadership\leadership\obj\Debug\leadership.csproj.SuggestedBindingRedirects.cache
+C:\Users\Veteran\source\repos\leadership\leadership\obj\Debug\leadership.csproj.CoreCompileInputs.cache
+C:\Users\Veteran\source\repos\leadership\leadership\obj\Debug\leadership.exe
+C:\Users\Veteran\source\repos\leadership\leadership\obj\Debug\leadership.pdb
