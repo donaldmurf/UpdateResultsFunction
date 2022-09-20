@@ -1,19 +1,19 @@
 ----------Performace Report----------
 Player name: Donnie
 *Initial Self Assessment:
-	-Initial Leadership_____________________:8
-	-Initial Teamwork_______________________:6
-	-Initial Technology_____________________:5
-	-Initial Professionalism________________:8
-	-Initial Communication__________________:6
-	-Initial Critical Thinking______________:5
+	-Initial Leadership_____________________:1
+	-Initial Teamwork_______________________:1
+	-Initial Technology_____________________:1
+	-Initial Professionalism________________:1
+	-Initial Communication__________________:1
+	-Initial Critical Thinking______________:1
 
 *Final Self Assesment:
-	-Final Leadership_______________________:18
-	-Final Professionalism_______________________:10
-	-Final Technology_______________________:2
-	-Final Communication____________________:2
-	-Final Critical Thinking________________:2
+	-Final Leadership_______________________:17
+	-Final Professionalism_______________________:17
+	-Final Technology_______________________:17
+	-Final Communication_______________________:17
+	-Final Critical Thinking_______________________:17
 
 *Chosen Career Field
 [No Career Fair Choice]
