@@ -24,6 +24,7 @@ namespace leadership
             {
                 i++;
                 string finalStatRegex = @"^\s+-" + statName + @"_*:\s*\d*\s?$"; //Match for Final Stats section
+                string VideoRegex = @"^\s+-" + statName + @"_*:\s*\s?$";
 
                 Match matchString = Regex.Match(s, finalStatRegex); //UPDATE for multiple matches
                 Match matchNum = Regex.Match(lines[i], @"\d+"); //Match num in string
@@ -73,10 +74,10 @@ namespace leadership
             
             //final stats
             a.UpdatePlayerResults("Final Leadership", playerFileName);
-            a.UpdatePlayerResults("Final Professionalism", playerFileName);
-            a.UpdatePlayerResults("Final Technology", playerFileName);
-            a.UpdatePlayerResults("Final Communication", playerFileName);
-            a.UpdatePlayerResults("Final Critical Thinking", playerFileName);
+           // a.UpdatePlayerResults("Final Professionalism", playerFileName);
+            //a.UpdatePlayerResults("Final Technology", playerFileName);
+            //a.UpdatePlayerResults("Final Communication", playerFileName);
+            //a.UpdatePlayerResults("Final Critical Thinking", playerFileName);
 
             //videos
         }
