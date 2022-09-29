@@ -60,20 +60,25 @@ namespace leadership
         private static void Main(string[] args)
         {
             Program a = new Program();
-            if (!File.Exists("Donnie 9-19-2022 H16M11S32.txt"))
+            if (!File.Exists("Testerr 9-29-2022 H12M32S17.txt"))
             {
                 Console.WriteLine("file not found");
             }
-            if (File.Exists("Donnie 9-19-2022 H16M11S32.txt"))
+            if (File.Exists("Testerr 9-29-2022 H12M32S17.txt"))
             {
                 Console.WriteLine("file found");
             }
-            string playerFileName = "Donnie 9-19-2022 H16M11S32.txt";
+
+            string playerFileName = "Testerr 9-29-2022 H12M32S17.txt";
+            
+            //final stats
             a.UpdatePlayerResults("Final Leadership", playerFileName);
             a.UpdatePlayerResults("Final Professionalism", playerFileName);
             a.UpdatePlayerResults("Final Technology", playerFileName);
             a.UpdatePlayerResults("Final Communication", playerFileName);
             a.UpdatePlayerResults("Final Critical Thinking", playerFileName);
+
+            //videos
         }
     }
 }
