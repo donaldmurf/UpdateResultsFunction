@@ -13,7 +13,7 @@ namespace leadership
         //      The players Technology skill increases -> UpdatePlayerResults ("Final Technology", playerFileName)
         //      or UpdatePlayerResults ("Final Technology", "mytext.txt")
         //NOTE: playerFileName should be used as the second parameter because that is the variable as the current session player
-        public void UpdatePlayerResults(string statName, string FileToUpdate)
+        public void UpdatePlayerResults(string resultName, string FileToUpdate)
         {
             string playerFileName = FileToUpdate;
 
@@ -23,28 +23,22 @@ namespace leadership
             foreach (string s in lines) //iterate though all strings in file
             {
                 i++;
-                string finalStatRegex = @"^\s+-" + statName + @"_*:\s*\d*\s?$"; //Match for Final Stats section
-                string VideoRegex = @"^\s+-" + statName + @"_*:\s*\s?$";
 
-                Match matchString = Regex.Match(s, finalStatRegex); //UPDATE for multiple matches
-                Match matchNum = Regex.Match(lines[i], @"\d+"); //Match num in string
-
-                if (matchString.Success) //string match from file
+                //Final Self Assesment
+                if (s.Contains("Final"))
                 {
-                    Debug.Write("String match line: " + i + " | ");
+                    string finalStatRegex = @"^\s+-" + resultName + @"_*:\s*\d*\s?$"; //Match for Final Stats section
 
-                    if (matchNum.Success)// number match from string
+                    Match matchFinalStat = Regex.Match(s, finalStatRegex); //UPDATE for multiple matches
+                    Match matchNum = Regex.Match(lines[i], @"\d+"); //Match num in string
+
+                    if (matchFinalStat.Success && matchNum.Success) //string match from file
                     {
                         if (Int32.TryParse(matchNum.Value, out int val))
                         {
-                            Debug.Write("Found NUM " + matchNum + " | ");
-
                             val++; //increase leadership value by 1
 
-                            lines[i] = Regex.Replace(matchString.ToString(), matchNum.ToString(), val.ToString()); //(input, pattern, replacement)  (original string, found num, updated num)
-
-                            Debug.Write("Updated to NUM " + val + "\n");
-
+                            lines[i] = Regex.Replace(matchFinalStat.ToString(), matchNum.ToString(), val.ToString()); //(input, pattern, replacement)  (original string, found num, updated num)
                         }
                         else
                         {
@@ -53,33 +47,58 @@ namespace leadership
                     }
                 }
 
+                //Videos Watched
+                else if (s.Contains("Video"))
+                {
+                    string InterviewRegex = "-[a-zA-Z]+:"+resultName+"_+: NO"; //^    -[a-zA-Z]+:Interview Prep_+: NO$
+
+                    Match matchVideo = Regex.Match(s, InterviewRegex);
+                    Match matchAnswerNO = Regex.Match(s, "NO");
+                    if (matchVideo.Success && matchAnswerNO.Success)
+                    {
+                        lines[i] = Regex.Replace(matchVideo.ToString(), matchAnswerNO.ToString(), "YES");
+
+                    }
+                }
+                //Informational Books Read
+                else if (s.Contains("Book"))
+                {
+                }
+                // Interview Performance STAR
+                else if (s.Contains("STAR"))
+                {
+                }
+                // Interview Performance VALUE
+                else if (s.Contains("VALUE"))
+                {
+                }
             }
             File.WriteAllLines(playerFileName, lines); //rewerite file with update
-
         }
 
         private static void Main(string[] args)
         {
             Program a = new Program();
-            if (!File.Exists("Testerr 9-29-2022 H12M32S17.txt"))
+            if (!File.Exists("programmer 9-29-2022 H16M31S32.txt"))
             {
                 Console.WriteLine("file not found");
             }
-            if (File.Exists("Testerr 9-29-2022 H12M32S17.txt"))
+            if (File.Exists("programmer 9-29-2022 H16M31S32.txt"))
             {
                 Console.WriteLine("file found");
             }
 
-            string playerFileName = "Testerr 9-29-2022 H12M32S17.txt";
-            
+            string playerFileName = "programmer 9-29-2022 H16M31S32.txt";
+
             //final stats
-            a.UpdatePlayerResults("Final Leadership", playerFileName);
-           // a.UpdatePlayerResults("Final Professionalism", playerFileName);
+            //a.UpdatePlayerResults("Final Leadership", playerFileName);
+            //a.UpdatePlayerResults("Final Professionalism", playerFileName);
             //a.UpdatePlayerResults("Final Technology", playerFileName);
             //a.UpdatePlayerResults("Final Communication", playerFileName);
             //a.UpdatePlayerResults("Final Critical Thinking", playerFileName);
 
             //videos
+            a.UpdatePlayerResults("Interview Prep", playerFileName);
         }
     }
 }

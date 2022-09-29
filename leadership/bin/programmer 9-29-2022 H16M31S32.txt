@@ -1,20 +1,20 @@
 -------------Performace Report-------------
-Player name: prog
+Player name: programmer
 *Initial Self Assessment:
-	-Initial Leadership_____________________:5
-	-Initial Teamwork_______________________:5
-	-Initial Technology_____________________:6
-	-Initial Professionalism________________:9
+	-Initial Leadership_____________________:7
+	-Initial Teamwork_______________________:6
+	-Initial Technology_____________________:5
+	-Initial Professionalism________________:8
 	-Initial Communication__________________:7
-	-Initial Critical Thinking______________:6
+	-Initial Critical Thinking______________:5
 
 *Final Self Assesment:
-	-Final Leadership_______________________:5
-	-Final Teamwork_________________________:5
-	-Final Technology_______________________:6
-	-Final Professionalism__________________:9
+	-Final Leadership_______________________:7
+	-Final Teamwork_________________________:6
+	-Final Technology_______________________:5
+	-Final Professionalism__________________:8
 	-Final Communication____________________:7
-	-Final Critical Thinking________________:6
+	-Final Critical Thinking________________:5
 
 *Chosen Career Field
 [No Career Fair Choice]
