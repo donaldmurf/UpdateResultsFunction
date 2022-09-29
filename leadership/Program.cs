@@ -50,7 +50,7 @@ namespace leadership
                 //Videos Watched
                 else if (s.Contains("Video"))
                 {
-                    string InterviewRegex = "-[a-zA-Z]+:"+resultName+"_+: NO"; //^    -[a-zA-Z]+:Interview Prep_+: NO$
+                    string InterviewRegex = @"\s*-[a-zA-Z]+:"+resultName+"_+: NO";
 
                     Match matchVideo = Regex.Match(s, InterviewRegex);
                     Match matchAnswerNO = Regex.Match(s, "NO");
@@ -98,7 +98,15 @@ namespace leadership
             //a.UpdatePlayerResults("Final Critical Thinking", playerFileName);
 
             //videos
-            a.UpdatePlayerResults("Interview Prep", playerFileName);
+            //a.UpdatePlayerResults("Interview Prep", playerFileName);
+            //a.UpdatePlayerResults("Networking", playerFileName);
+            //a.UpdatePlayerResults("Personal Branding", playerFileName);
+            //a.UpdatePlayerResults("Star", playerFileName);
+            //a.UpdatePlayerResults("Survive Adapt and Florish", playerFileName);
+            //a.UpdatePlayerResults("Sweet Spot", playerFileName);
+            //a.UpdatePlayerResults("Value", playerFileName);
+
+
         }
     }
 }
