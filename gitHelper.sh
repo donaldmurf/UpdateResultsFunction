@@ -6,9 +6,6 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 PURP='\033[0;35m'
 NC='\033[0m'
-#Alias for shortcut commands
-alias Sync= "git fetch --all -Pp"
-alias Reset="git reset —hard && git clean -fxd "
 
 printf "${RED}Sync Git with GitHub---------------------------|${NC}\n"
 printf "${GREEN}git fetch --all -Pp\n"
