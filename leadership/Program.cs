@@ -13,7 +13,7 @@ namespace leadership
         //      The players Technology skill increases -> UpdatePlayerResults ("Final Technology", playerFileName)
         //      or UpdatePlayerResults ("Final Technology", "mytext.txt")
         //NOTE: playerFileName should be used as the second parameter because that is the variable as the current session player
-        public void UpdatePlayerResults(string resultName, string FileToUpdate)
+        public  void UpdatePlayerResults(string resultName, string FileToUpdate)
         {
             string playerFileName = FileToUpdate;
 
@@ -40,17 +40,13 @@ namespace leadership
 
                             lines[i] = Regex.Replace(matchFinalStat.ToString(), matchNum.ToString(), val.ToString()); //(input, pattern, replacement)  (original string, found num, updated num)
                         }
-                        else
-                        {
-                            Debug.Write("ERROR:Line " + i + " unable to convert " + matchNum.Value + " to an INT for update");
-                        }
                     }
                 }
 
                 //Videos Watched
                 else if (s.Contains("Video"))
                 {
-                    string InterviewRegex = @"\s*-[a-zA-Z]+:"+resultName+"_+: NO";
+                    string InterviewRegex = @"\s*-[a-zA-Z]+:" + resultName + "_+: NO";
 
                     Match matchVideo = Regex.Match(s, InterviewRegex);
                     Match matchAnswerNO = Regex.Match(s, "NO");
@@ -91,7 +87,7 @@ namespace leadership
             string playerFileName = "programmer 9-29-2022 H16M31S32.txt";
 
             //final stats
-            //a.UpdatePlayerResults("Final Leadership", playerFileName);
+            a.UpdatePlayerResults("Final Leadership",playerFileName);
             //a.UpdatePlayerResults("Final Professionalism", playerFileName);
             //a.UpdatePlayerResults("Final Technology", playerFileName);
             //a.UpdatePlayerResults("Final Communication", playerFileName);
