@@ -59,6 +59,7 @@ namespace leadership
                 //Informational Books Read
                 else if (s.Contains("Book"))
                 {
+                    // s*-Book:[A-Za-z0-9]+([ ,A-Za-z0-9]+)++.+
                 }
                 // Interview Performance STAR
                 else if (s.Contains("STAR"))
