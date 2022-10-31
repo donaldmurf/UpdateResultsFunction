@@ -35,7 +35,7 @@ Branch of Service:
 	-Video:Value____________________________: NO
 
 *Informational Books Read:
-	-Book:What to Say and How to Say It!________: NO
+	-Book:What to Say and How to Say It!_________: NO
 	-Book:Brain Teasers__________________________: NO
 	-Book:Team Synergy___________________________: NO
 	-Book:Hiring Manager's Guide to Everything___: NO
