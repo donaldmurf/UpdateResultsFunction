@@ -84,7 +84,7 @@ namespace leadership
                 Console.WriteLine("file found");
             }
 
-            string playerFileName = "programmer 9-29-2022 H16M31S32.txt";
+            string playerFileName = "programmer 10-30-2022 H21M11S10.txt";
 
             //final stats
             a.UpdatePlayerResults("Final Leadership",playerFileName);

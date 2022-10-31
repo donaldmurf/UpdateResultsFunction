@@ -1,5 +1,12 @@
--------------Performace Report-------------
+#-----------------------------------------#
+|Thank you for playing!                   |
+|Send this file to mike@callahanrose.com  |
+|to gain access to biginterview.com.      |
+#-----------------------------------------#
+
+---------------Performace Report----------------
 Player name: programmer
+Branch of Service: 
 *Initial Self Assessment:
 	-Initial Leadership_____________________:7
 	-Initial Teamwork_______________________:6
@@ -21,19 +28,34 @@ Player name: programmer
 
 *Videos Watched:
 	-Video:Interview Prep___________________: NO
-	-Video:Networking_______________________: NO
 	-Video:Personal Branding________________: NO
 	-Video:Star_____________________________: NO
-	-Video:Survive Adapt and Florish________: NO
+	-Video:Survive Adapt and Flourish_______: NO
 	-Video:Sweet Spot_______________________: NO
 	-Video:Value____________________________: NO
 
 *Informational Books Read:
-	-Book:1_________________________________: NO
-	-Book:2_________________________________: NO
-	-Book:3_________________________________: NO
-	-Book:4_________________________________: NO
-	-Book:5_________________________________: NO
+	-Book:What to Say (and How to Say It!________: NO
+	-Book:Brain Teasers__________________________: NO
+	-Book:Team Synergy___________________________: NO
+	-Book:Hiring Manager's Guide to Everything___: NO
+	-Book:Principles of Management_______________: NO
+	-Book:Employment Laws________________________: NO
+	-Book:CompTia A+ Certification Prep Questions: NO
+	-Book:Intro to Hardware______________________: NO
+	-Book:Troubleshooting 101____________________: NO
+	-Book:Guide to Networking____________________: NO
+	-Book:How to Be a Better Leader______________: NO
+	-Book:Into to Python_________________________: NO
+	-Book:Software Engineering Principles________: NO
+	-Book:Debugging 101__________________________: NO
+	-Book:Game Design____________________________: NO
+	-Book:Working in a Team______________________: NO
+	-Book:Microswift Office for Dummies__________: NO
+	-Book:Principles of Engineering______________: NO
+	-Book:I Inc., Career Planning and Personal___: NO
+	-Book:Entrepreneurship_______________________: NO
+	-Book:Tiger in the Office____________________: NO
 
 *Interview Performance:
 	-STAR___________________________________:NO
