@@ -1,78 +1,78 @@
-#-----------------------------------------#
-|Thank you for playing!                   |
-|Send this file to mike@callahanrose.com  |
-|to gain access to biginterview.com.      |
-#-----------------------------------------#
+#--------------------------------------------------------#
+|Thank you for playing! 					   |
+|Veterans gain free access to biginterview.com.          |
+|Send this file to mike@callahanrose.com for access      |
+#--------------------------------------------------------#
 
 ---------------Performace Report----------------
 Player name: programmer
 Branch of Service: 
 *Initial Self Assessment:
-	-Initial Leadership_____________________:7
-	-Initial Teamwork_______________________:6
-	-Initial Technology_____________________:5
-	-Initial Professionalism________________:8
-	-Initial Communication__________________:7
-	-Initial Critical Thinking______________:5
+	-Initial Leadership____________________________:7
+	-Initial Teamwork______________________________:6
+	-Initial Technology____________________________:5
+	-Initial Professionalism_______________________:8
+	-Initial Communication_________________________:7
+	-Initial Critical Thinking_____________________:5
 
 *Final Self Assesment:
-	-Final Leadership_______________________:7
-	-Final Teamwork_________________________:6
-	-Final Technology_______________________:5
-	-Final Professionalism__________________:8
-	-Final Communication____________________:7
-	-Final Critical Thinking________________:5
+	-Final Leadership______________________________:7
+	-Final Teamwork________________________________:6
+	-Final Technology______________________________:5
+	-Final Professionalism_________________________:8
+	-Final Communication___________________________:7
+	-Final Critical Thinking_______________________:5
 
 *Chosen Career Field
 [No Career Fair Choice]
 
 *Videos Watched:
-	-Video:Interview Prep___________________: NO
-	-Video:Personal Branding________________: NO
-	-Video:Star_____________________________: NO
-	-Video:Survive Adapt and Flourish_______: NO
-	-Video:Sweet Spot_______________________: NO
-	-Video:Value____________________________: NO
+	-Video:Interview Prep__________________________: NO
+	-Video:Personal Branding_______________________: NO
+	-Video:Star____________________________________: NO
+	-Video:Survive Adapt and Flourish______________: NO
+	-Video:Sweet Spot______________________________: NO
+	-Video:Value___________________________________: NO
 
 *Informational Books Read:
-	-Book:What to Say and How to Say It!_________: NO
-	-Book:Brain Teasers__________________________: NO
-	-Book:Team Synergy___________________________: NO
-	-Book:Hiring Manager's Guide to Everything___: NO
-	-Book:Principles of Management_______________: NO
-	-Book:Employment Laws________________________: NO
-	-Book:CompTia A+ Certification Prep Questions: NO
-	-Book:Intro to Hardware______________________: NO
-	-Book:Troubleshooting 101____________________: NO
-	-Book:Guide to Networking____________________: NO
-	-Book:How to Be a Better Leader______________: NO
-	-Book:Into to Python_________________________: NO
-	-Book:Software Engineering Principles________: NO
-	-Book:Debugging 101__________________________: NO
-	-Book:Game Design____________________________: NO
-	-Book:Working in a Team______________________: NO
-	-Book:Microswift Office for Dummies__________: NO
-	-Book:Principles of Engineering______________: NO
-	-Book:I Inc., Career Planning and Personal___: NO
-	-Book:Entrepreneurship_______________________: NO
-	-Book:Tiger in the Office____________________: NO
+-Book:What to Say and How to Say It!___________: YES
+-Book:Brain Teasers____________________________: YES
+-Book:Team Synergy_____________________________: YES
+-Book:Hiring Manager's Guide to Everything_____: YES
+-Book:Principles of Management_________________: YES
+-Book:Employment Laws__________________________: YES
+-Book:CompTia A plus Certification Prep Questions__: YES
+-Book:Intro to Hardware________________________: YES
+-Book:Troubleshooting 101______________________: YES
+-Book:Guide to Networking______________________: YES
+-Book:How to Be a Better Leader________________: YES
+-Book:Into to Python___________________________: YES
+-Book:Software Engineering Principles__________: YES
+-Book:Debugging 101____________________________: YES
+-Book:Game Design______________________________: YES
+-Book:Working in a Team________________________: YES
+-Book:Microswift Office for Dummies____________: YES
+-Book:Principles of Engineering________________: YES
+-Book:I Inc., Career Planning and Personal_____: YES
+-Book:Entrepreneurship_________________________: YES
+-Book:Tiger in the Office______________________: YES
 
 *Interview Performance:
-	-STAR___________________________________:NO
-	-STAR:Question 1________________________:0%
-	-STAR:Question 2________________________:0%
-	-STAR:Question 3________________________:0%
-	-STAR:Question 4________________________:0%
-	-STAR:Question 5________________________:0%
-	-STAR:Progress Bar_________________[******    ]
+	-STAR__________________________________________:NO
+	-STAR:Question 1_______________________________:0%
+	-STAR:Question 2_______________________________:0%
+	-STAR:Question 3_______________________________:0%
+	-STAR:Question 4_______________________________:0%
+	-STAR:Question 5_______________________________:0%
+	-STAR:Progress Bar____________________[******    ]
 
-    -VALUE________________________________:NO
-	-VALUE:Question 1_____________________________:0%
-	-VALUE:Question 2_____________________________:0%
-	-VALUE:Question 3_____________________________:0%
-	-VALUE:Question 4_____________________________:0%
-	-VALUE:Question 5_____________________________:0%
-	-VALUE:Progress Bar__________________[**********]
+    -VALUE___________________________________________:NO
+	-VALUE:Question 1______________________________:0%
+	-VALUE:Question 2______________________________:0%
+	-VALUE:Question 3______________________________:0%
+	-VALUE:Question 4______________________________:0%
+	-VALUE:Question 5______________________________:0%
+	-VALUE:Progress Bar___________________[**********]
 
 --------------Comments---------------
 

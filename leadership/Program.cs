@@ -57,9 +57,11 @@ namespace leadership
                 //Informational Books Read
                 else if (line.Contains("Book"))
                 {
+                    //previously tried regex kept for making/editing template
                     // s*-Book:([A-Za-z0-9 !',+.]+)++.+
                     //s*-Book:Team Synergy+_+:\s*NO
-                    string BookRegex = @"s*-Book:" + resultName + "+_+:\\s*NO";
+                    //s*-Book:([CompTia A+ Certification Prep Questions])+:\s*NO
+                    string BookRegex = @"s*-Book:(" + resultName + ")_+:\\s*NO";
                     Match matchBook = Regex.Match(line, BookRegex);
                     Match matchAnswerNO = Regex.Match(line, "NO");
                     if (matchBook.Success && matchAnswerNO.Success)
@@ -109,28 +111,28 @@ namespace leadership
             //a.UpdatePlayerResults("Sweet Spot", playerFileName);
             //a.UpdatePlayerResults("Value", playerFileName);
 
-            ////books
-            //a.UpdatePlayerResults("What to Say and How to Say It!", playerFileName);
-            //a.UpdatePlayerResults("Brain Teasers", playerFileName);
-            //a.UpdatePlayerResults("Team Synergy", playerFileName);
-            //a.UpdatePlayerResults("Hiring Manager's Guide to Everything", playerFileName);
-            //a.UpdatePlayerResults("Principles of Management", playerFileName);
-            //a.UpdatePlayerResults("Employment Laws", playerFileName);
-            //a.UpdatePlayerResults("CompTia A+ Certification Prep Questions", playerFileName);
-            //a.UpdatePlayerResults("Intro to Hardware", playerFileName);
-            //a.UpdatePlayerResults("Troubleshooting 101", playerFileName);
-            //a.UpdatePlayerResults("Guide to Networking", playerFileName);
-            //a.UpdatePlayerResults("How to Be a Better Leader", playerFileName);
-            //a.UpdatePlayerResults("Into to Python", playerFileName);
-            //a.UpdatePlayerResults("Software Engineering Principles", playerFileName);
-            //a.UpdatePlayerResults("Debugging 101", playerFileName);
-            //a.UpdatePlayerResults("Game Design", playerFileName);
-            //a.UpdatePlayerResults("Working in a Team", playerFileName);
-            //a.UpdatePlayerResults("Microswift Office for Dummies", playerFileName);
-            //a.UpdatePlayerResults("Principles of Engineering", playerFileName);
-            //a.UpdatePlayerResults("I Inc., Career Planning and Personal", playerFileName);
-            //a.UpdatePlayerResults("Entrepreneurship", playerFileName);
-            //a.UpdatePlayerResults("Tiger in the Office", playerFileName);
+            //books
+            a.UpdatePlayerResults("What to Say and How to Say It!", playerFileName);
+            a.UpdatePlayerResults("Brain Teasers", playerFileName);
+            a.UpdatePlayerResults("Team Synergy", playerFileName);
+            a.UpdatePlayerResults("Hiring Manager's Guide to Everything", playerFileName);
+            a.UpdatePlayerResults("Principles of Management", playerFileName);
+            a.UpdatePlayerResults("Employment Laws", playerFileName);
+            a.UpdatePlayerResults("CompTia A plus Certification Prep Questions", playerFileName);
+            a.UpdatePlayerResults("Intro to Hardware", playerFileName);
+            a.UpdatePlayerResults("Troubleshooting 101", playerFileName);
+            a.UpdatePlayerResults("Guide to Networking", playerFileName);
+            a.UpdatePlayerResults("How to Be a Better Leader", playerFileName);
+            a.UpdatePlayerResults("Into to Python", playerFileName);
+            a.UpdatePlayerResults("Software Engineering Principles", playerFileName);
+            a.UpdatePlayerResults("Debugging 101", playerFileName);
+            a.UpdatePlayerResults("Game Design", playerFileName);
+            a.UpdatePlayerResults("Working in a Team", playerFileName);
+            a.UpdatePlayerResults("Microswift Office for Dummies", playerFileName);
+            a.UpdatePlayerResults("Principles of Engineering", playerFileName);
+            a.UpdatePlayerResults("I Inc., Career Planning and Personal", playerFileName);
+            a.UpdatePlayerResults("Entrepreneurship", playerFileName);
+            a.UpdatePlayerResults("Tiger in the Office", playerFileName);
         }
     }
 }
