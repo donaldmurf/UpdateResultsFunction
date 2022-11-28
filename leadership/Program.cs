@@ -12,7 +12,7 @@ namespace leadership
         //      The players Technology skill increases -> UpdatePlayerResults ("Final Technology", playerFileName)
         //      or UpdatePlayerResults ("Final Technology", "mytext.txt")
         //NOTE: playerFileName should be used as the second parameter because that is the variable as the current session player
-        public void UpdatePlayerResults(string resultName, string FileToUpdate)
+        public  void UpdatePlayerResults(string resultName, string FileToUpdate)
         {
             string playerFileName = FileToUpdate;
 
@@ -61,21 +61,45 @@ namespace leadership
                     // s*-Book:([A-Za-z0-9 !',+.]+)++.+
                     //s*-Book:Team Synergy+_+:\s*NO
                     //s*-Book:([CompTia A+ Certification Prep Questions])+:\s*NO
-                    string BookRegex = @"s*-Book:(" + resultName + ")_+:\\s*NO";
+                    string BookRegex = "\\s*" + @"-Book:" + resultName + "+.+";
+
                     Match matchBook = Regex.Match(line, BookRegex);
                     Match matchAnswerNO = Regex.Match(line, "NO");
+
                     if (matchBook.Success && matchAnswerNO.Success)
                     {
                         allLines[i] = Regex.Replace(matchBook.ToString(), matchAnswerNO.ToString(), "YES");
                     }
+
                 }
                 // Interview Performance STAR
                 else if (line.Contains("STAR"))
                 {
+                    // s * -STAR:Question 1 + _ +:\s * 0
+                    // -STAR:Question 1_ +:0 %
+                    string STARRegex = @"-STAR:"+@resultName+@"_+:0%";
+
+                    Match matchSTAR = Regex.Match(line, STARRegex);
+                    Match matchAnswerZero = Regex.Match(line, "0");
+                    if (matchSTAR.Success && matchAnswerZero.Success)
+                    {
+                        allLines[i] = Regex.Replace(matchSTAR.ToString(), matchAnswerZero.ToString(), "30");
+                    }
                 }
                 // Interview Performance VALUE
                 else if (line.Contains("VALUE"))
                 {
+                    // s * -VALUE:Question 1 + _ +:\s * 0
+                    string VALUERegex = @"-VALUE:" + resultName + "_ +:0";
+
+                    Match matchVALUE = Regex.Match(line, VALUERegex);
+                    Match matchAnswerZero = Regex.Match(line, "NO");
+
+                    if (matchVALUE.Success && matchAnswerZero.Success)
+                    {
+                        allLines[i] = Regex.Replace(matchVALUE.ToString(), matchAnswerZero.ToString(), "YES");
+                    }
+
                 }
             }
             File.WriteAllLines(playerFileName, allLines); //rewerite file with update
@@ -84,16 +108,16 @@ namespace leadership
         private static void Main(string[] args)
         {
             Program a = new Program();
-            if (!File.Exists("programmer 9-29-2022 H16M31S32.txt"))
+            if (!File.Exists("TestFile.txt"))
             {
                 Console.WriteLine("file not found");
             }
-            if (File.Exists("programmer 9-29-2022 H16M31S32.txt"))
+            if (File.Exists("TestFile.txt"))
             {
                 Console.WriteLine("file found");
             }
 
-            string playerFileName = "programmer 10-30-2022 H21M11S10.txt";
+            string playerFileName = "TestFile.txt";
 
             //final stats
             //a.UpdatePlayerResults("Final Leadership",playerFileName);
@@ -112,27 +136,31 @@ namespace leadership
             //a.UpdatePlayerResults("Value", playerFileName);
 
             //books
-            a.UpdatePlayerResults("What to Say and How to Say It!", playerFileName);
-            a.UpdatePlayerResults("Brain Teasers", playerFileName);
-            a.UpdatePlayerResults("Team Synergy", playerFileName);
-            a.UpdatePlayerResults("Hiring Manager's Guide to Everything", playerFileName);
-            a.UpdatePlayerResults("Principles of Management", playerFileName);
-            a.UpdatePlayerResults("Employment Laws", playerFileName);
-            a.UpdatePlayerResults("CompTia A plus Certification Prep Questions", playerFileName);
-            a.UpdatePlayerResults("Intro to Hardware", playerFileName);
-            a.UpdatePlayerResults("Troubleshooting 101", playerFileName);
-            a.UpdatePlayerResults("Guide to Networking", playerFileName);
-            a.UpdatePlayerResults("How to Be a Better Leader", playerFileName);
-            a.UpdatePlayerResults("Into to Python", playerFileName);
-            a.UpdatePlayerResults("Software Engineering Principles", playerFileName);
-            a.UpdatePlayerResults("Debugging 101", playerFileName);
-            a.UpdatePlayerResults("Game Design", playerFileName);
-            a.UpdatePlayerResults("Working in a Team", playerFileName);
-            a.UpdatePlayerResults("Microswift Office for Dummies", playerFileName);
-            a.UpdatePlayerResults("Principles of Engineering", playerFileName);
-            a.UpdatePlayerResults("I Inc., Career Planning and Personal", playerFileName);
-            a.UpdatePlayerResults("Entrepreneurship", playerFileName);
-            a.UpdatePlayerResults("Tiger in the Office", playerFileName);
+            //a.UpdatePlayerResults("What to Say and How to Say It!", playerFileName);
+            //a.UpdatePlayerResults("Brain Teasers", playerFileName);
+            //a.UpdatePlayerResults("Team Synergy", playerFileName);
+            //a.UpdatePlayerResults("Hiring Manager's Guide to Everything", playerFileName);
+            //a.UpdatePlayerResults("Principles of Management", playerFileName);
+            //a.UpdatePlayerResults("Employment Laws", playerFileName);
+            //a.UpdatePlayerResults("CompTia A plus Certification Prep Questions", playerFileName);
+            //a.UpdatePlayerResults("Intro to Hardware", playerFileName);
+            //a.UpdatePlayerResults("Troubleshooting 101", playerFileName);
+            //a.UpdatePlayerResults("Guide to Networking", playerFileName);
+            //a.UpdatePlayerResults("How to Be a Better Leader", playerFileName);
+            //a.UpdatePlayerResults("Into to Python", playerFileName);
+            //a.UpdatePlayerResults("Software Engineering Principles", playerFileName);
+            //a.UpdatePlayerResults("Debugging 101", playerFileName);
+            //a.UpdatePlayerResults("Game Design", playerFileName);
+            //a.UpdatePlayerResults("Working in a Team", playerFileName);
+            //a.UpdatePlayerResults("Microswift Office for Dummies", playerFileName);
+            //a.UpdatePlayerResults("Principles of Engineering", playerFileName);
+            //a.UpdatePlayerResults("I Inc., Career Planning and Personal", playerFileName);
+            //a.UpdatePlayerResults("Entrepreneurship", playerFileName);
+            //a.UpdatePlayerResults("Tiger in the Office", playerFileName);
+
+            a.UpdatePlayerResults("QUESTION 1", playerFileName);
+
+
         }
     }
 }
