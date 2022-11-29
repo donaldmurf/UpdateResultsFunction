@@ -76,7 +76,7 @@ namespace leadership
                 else if (line.Contains("STAR"))
                 {
                     // [^\n\r]*-STAR:Question 1_*:s*0%
-                    string STARRegex = "[^\n\r]*-STAR:"+resultName+"_*:s*0%";
+                    string STARRegex = "[^\n\r]*-"+resultName+"_*:s*0%";
 
                     Match matchSTAR = Regex.Match(line, STARRegex);
                     Match matchAnswerZero = Regex.Match(line, "0");
@@ -89,14 +89,14 @@ namespace leadership
                 else if (line.Contains("VALUE"))
                 {
                     // s * -VALUE:Question 1 + _ +:\s * 0
-                    string VALUERegex = @"-VALUE:" + resultName + @"_ +:0";
+                    string VALUERegex = "[^\n\r]*-"+resultName +"_*:s*0%";
 
                     Match matchVALUE = Regex.Match(line, VALUERegex);
-                    Match matchAnswerZero = Regex.Match(line, "NO");
+                    Match matchAnswerZero = Regex.Match(line, "0");
 
                     if (matchVALUE.Success && matchAnswerZero.Success)
                     {
-                        allLines[i] = Regex.Replace(matchVALUE.ToString(), matchAnswerZero.ToString(), "YES");
+                        allLines[i] = Regex.Replace(matchVALUE.ToString(), matchAnswerZero.ToString(), "20");
                     }
 
                 }
@@ -157,11 +157,9 @@ namespace leadership
             //a.UpdatePlayerResults("Entrepreneurship", playerFileName);
             //a.UpdatePlayerResults("Tiger in the Office", playerFileName);
 
-            a.UpdatePlayerResults("Question 1", playerFileName);
-            a.UpdatePlayerResults("Question 2", playerFileName);
-            a.UpdatePlayerResults("Question 3", playerFileName);
-            a.UpdatePlayerResults("Question 4", playerFileName);
-            a.UpdatePlayerResults("Question 5", playerFileName);
+            a.UpdatePlayerResults("STAR:Question 1", playerFileName);
+            a.UpdatePlayerResults("VALUE:Question 2", playerFileName);
+            
 
 
         }
