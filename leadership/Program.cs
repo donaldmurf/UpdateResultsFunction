@@ -75,9 +75,8 @@ namespace leadership
                 // Interview Performance STAR
                 else if (line.Contains("STAR"))
                 {
-                    // s * -STAR:Question 1 + _ +:\s * 0
-                    // -STAR:Question 1_ +:0 %
-                    string STARRegex = @"-STAR:"+@resultName+@"_+:0%";
+                    // [^\n\r]*-STAR:Question 1_*:s*0%
+                    string STARRegex = "[^\n\r]*-STAR:"+resultName+"_*:s*0%";
 
                     Match matchSTAR = Regex.Match(line, STARRegex);
                     Match matchAnswerZero = Regex.Match(line, "0");
@@ -90,7 +89,7 @@ namespace leadership
                 else if (line.Contains("VALUE"))
                 {
                     // s * -VALUE:Question 1 + _ +:\s * 0
-                    string VALUERegex = @"-VALUE:" + resultName + "_ +:0";
+                    string VALUERegex = @"-VALUE:" + resultName + @"_ +:0";
 
                     Match matchVALUE = Regex.Match(line, VALUERegex);
                     Match matchAnswerZero = Regex.Match(line, "NO");
@@ -158,7 +157,11 @@ namespace leadership
             //a.UpdatePlayerResults("Entrepreneurship", playerFileName);
             //a.UpdatePlayerResults("Tiger in the Office", playerFileName);
 
-            a.UpdatePlayerResults("QUESTION 1", playerFileName);
+            a.UpdatePlayerResults("Question 1", playerFileName);
+            a.UpdatePlayerResults("Question 2", playerFileName);
+            a.UpdatePlayerResults("Question 3", playerFileName);
+            a.UpdatePlayerResults("Question 4", playerFileName);
+            a.UpdatePlayerResults("Question 5", playerFileName);
 
 
         }
